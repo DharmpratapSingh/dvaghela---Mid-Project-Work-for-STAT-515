@@ -3,7 +3,7 @@
     "path": "~/STAT-RFiles/dvaghela---Mid-Project-Work-for-STAT-515/code.qmd",
     "project_path": "code.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "4243526510",
     "contents": "",
     "dirty": false,
     "created": 1710170864452.0,
@@ -19,14 +19,14 @@
         "rmdVisualCollapsedChunks": "",
         "cursorPosition": "4,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "3002:0"
+        "rmdVisualModeLocation": "183:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710171172,
+    "lastKnownWriteTime": 1710185042,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710171172589,
+    "last_content_update": 1710185042709,
     "read_only": false,
     "read_only_alternatives": []
 }

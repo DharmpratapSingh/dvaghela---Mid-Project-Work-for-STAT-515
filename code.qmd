@@ -33,6 +33,7 @@ hw <- theme_gray()+ theme(
   axis.text.x=element_text(margin=margin(-1,0,3,0))
 )
 
+# made this data to eliminate missing values.
 filtered_data = child_mortality_data %>% filter(!is.na(Continent)) %>%
   filter(!is.na(Observation.value))
 
@@ -40,8 +41,6 @@ filtered_data = child_mortality_data %>% filter(!is.na(Continent)) %>%
 library(shiny)
 library(ggplot2)
 library(plotly)
-
-# Assuming your data frame is named 'filtered_data'
 
 ui = fluidPage(
   titlePanel("Observation Values Across Years"),
@@ -56,11 +55,11 @@ ui = fluidPage(
   )
 )
 
-server <- function(input, output) {
-  output$plot <- renderPlotly({
-    selected_country <- filtered_data[filtered_data$Entity == input$country, ]
+server = function(input, output) {
+  output$plot = renderPlotly({
+    selected_country = filtered_data[filtered_data$Entity == input$country, ]
     
-    p <- ggplot(data = selected_country, aes(x = Year, y = Observation.value, fill = as.factor(Year))) +
+    p = ggplot(data = selected_country, aes(x = Year, y = Observation.value, fill = as.factor(Year))) +
       geom_bar(stat = "identity") +
       labs(title = paste("Observation Data Across Years for", input$country),
            x = "Year",
@@ -73,34 +72,30 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 
 ################################################################################################
-
+# Used extra dataset to perform easy visualization based on Continent
 countries = read.csv("cc.csv")
 
-# Load required libraries
 library(dplyr)
 library(plotly)
 
 
-# Remove rows with missing observation values
 child_mortality_data <- child_mortality_data[!is.na(child_mortality_data$Observation.value), ]
 
-# Join the datasets based on country
+# Join used between two datasets to get better results
 merged_data = inner_join(countries, child_mortality_data, by = c("Country" = "Entity"))
 
 
-# Calculate average child mortality rates per continent
 avg_mortality_per_continent = merged_data %>%
   group_by(Continent.x) %>%
   summarize(Avg_Mortality = mean(Observation.value, na.rm = TRUE))
 
-# Plot the graph using Plotly
+
 plot = plot_ly(avg_mortality_per_continent, x = ~Continent.x, y = ~Avg_Mortality, type = 'bar',
                 marker = list(color = 'rgb(158,202,225)', line = list(color = 'rgb(8,48,107)', width = 1.5))) %>%
   layout(title = 'Average Child Mortality Rates per Continent',
          xaxis = list(title = 'Continent'),
          yaxis = list(title = 'Average Child Mortality Rate'))
 
-# Display the plot
 plot
 
 ```
