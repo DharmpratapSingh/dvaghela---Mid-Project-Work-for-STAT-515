@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "dcaghela - STAT 515 Mid Project"
+  title: "dvaghela - STAT 515 Mid Project"
   navbar:
     left:
       - href: index.qmd
