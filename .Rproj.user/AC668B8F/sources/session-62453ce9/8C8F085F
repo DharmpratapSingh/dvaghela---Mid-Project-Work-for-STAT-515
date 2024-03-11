@@ -3,7 +3,7 @@
     "path": "~/STAT-RFiles/dvaghela---Mid-Project-Work-for-STAT-515/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "0",
+    "hash": "2841395954",
     "contents": "",
     "dirty": false,
     "created": 1710168007257.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "8,23",
+        "cursorPosition": "5,42",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710185170,
+    "lastKnownWriteTime": 1710185898,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710185170333,
+    "last_content_update": 1710185898831,
     "read_only": false,
     "read_only_alternatives": []
 }
