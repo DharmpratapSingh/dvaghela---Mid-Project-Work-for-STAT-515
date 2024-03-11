@@ -2,10 +2,32 @@
 title: "dvaghela - STAT 515 Mid Project"
 ---
 
-This is a Quarto website.
+This is a STAT 515 Mid Project website for group number - 29.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is the original Graph which is about **Child mortality rate from 1960 to 2021:**
 
-```{r}
-1 + 1
-```
+![](images/child-mortality-1960-vs-latest-slope.png){fig-align="center"}
+
+Reasons for choosing this Graph:
+
+-   Graphs shows very less appealing and easy to understand design.
+
+-   Due to high number of data being added in the graph above, users cannot find the difference and cannot see the relations about these lines between the years of 1960 to 2021.
+
+-   Labeling of Graphs is also poor as very selected countries are taken into consideration.
+
+-   Observation of same continent's countries is very difficult as same colors are used.
+
+#### Plot 1:
+
+![](Rplot1.png)
+
+-   Better Visualization with data per continent provides better understanding about the child mortality stats.
+
+#### Plot 2:
+
+![](Plot2.PNG){fig-align="center"}
+
+-   Shiny app usage was done in order to make it more interactive and Users can select their desired country from the drop down option for better understanding about the trend of Child mortality.
+
+-   Use of another dataset was done in order to make this graph more interactive and easy to use due to insufficient data availability.
